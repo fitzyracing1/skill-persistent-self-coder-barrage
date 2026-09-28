@@ -1,0 +1,45 @@
+# Skill: Persistent Self-Coder
+
+> A Grok skill for autonomous coding that scans the environment and writes the next file without a full prompt each time.
+
+## Purpose
+Explain the self-coder as a process that keeps delivering code from inferred gaps. Source: fitzyracing1/skill-persistent-self-coder.
+
+## How it works (plain English)
+1. Scan files and context.
+2. Presume what is missing.
+3. Write or edit the next piece.
+4. Leave state so the next run can continue.
+
+## Key ideas
+- Persistent (later runs find the same tree)
+- Self-delivery (it ships its own next file)
+- Scan then write (look first, then code)
+
+## The actual code
+```
+# source: fitzyracing1/skill-persistent-self-coder
+scan_environment()
+presume_need()
+write_next()
+save_state()
+```
+
+## Line-by-line translation
+1. scan_environment() → “look at the machine and files”
+2. presume_need() → “guess what is missing”
+3. write_next() → “ship that piece”
+4. save_state() → “leave a note for the next run”
+
+## Decisions the program makes
+- If no tree exists → bootstrap
+- If a gap is found → write the file
+
+## What a person would notice
+Code arriving without a fresh step-by-step prompt.
+
+## Current status
+Barrage clone.
+
+## Next possible steps
+Open the HTML skill, or the persistent-self-delivery-kit source.
